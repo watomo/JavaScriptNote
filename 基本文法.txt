@@ -1,0 +1,62 @@
+
+let
+letは変数の重複を許可しない
+
+const
+constは定数
+
+テンプレート文字列
+let name = 'watomo'
+console.log(`Hello, ${name}`)
+
+== 左辺と右辺が等しいか
+=== 左辺と右辺がデータ型含め等しいか
+
+
+配列のループ
+let data = ['apple', 'orange', 'banana'];
+for (var value of data) {
+   console.log(value);
+}
+
+forEach
+    let data = [2,3,4,5];
+    data.forEach(function (value, index, array) {
+       console.log(value * value);
+    });
+
+map
+    let data = [2,3,4,5];
+    let result = data.map(function (value, index, array) {
+        return value * value;
+    });
+    console.log(result);
+
+filter
+    let data = [2,3,4,5];
+    let result = data.filter(function (value, index, array) {
+        return value * value;
+    });
+    console.log(result);
+
+配列に条件に合致する要素が存在するか some
+    let data = [2,3,4,5];
+    let result = data.some(function (value, index, array) {
+        return value % 3 === 0;
+    });
+    if (result) {
+        console.log('found');
+
+ES6でMap,Setが追加された。
+オブジェクトリテラルとMapをうまく使い分ける必要がある
+
+オブジェクトリテラルとの違い
+任意の型をキーにできる。オブジェクトリテラルは文字列だけ
+Mapのサイズを取得できる
+
+キーは===で比較される
+
+アロー関数
+let arrowFunction = () => {console.log('arrowFunction')};
+
+関数リテラルは実行時に評価される→呼び出し元より先に記述する必要がある    
