@@ -60,3 +60,11 @@ Mapのサイズを取得できる
 let arrowFunction = () => {console.log('arrowFunction')};
 
 関数リテラルは実行時に評価される→呼び出し元より先に記述する必要がある    
+
+可変長引数
+let doSum = function (...sum) {
+    sum.forEach(function(value, index, array) {
+        console.log(value * value);
+    });
+}
+doSum(2,3,4,5,6);
